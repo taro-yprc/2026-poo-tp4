@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
+        "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+
+    <module name="TreeWalker">
+
+
+        <module name="DeclarationOrder"/>
+        <!-- Constructores todos juntos -->
+        <module name="ConstructorsDeclarationGroupingCheck"/>
+        <!-- Que no haya bloques de codigo vacio -->
+        <module name="EmptyBlock"/>
+        <!-- Llaves en todas las estructuras de control -->
+        <module name="NeedBraces"/>
+        <!-- Que no haya sentencias vacias -->
+        <module name="EmptyStatement"/>
+        <!-- Inicializacion explicita de referencias a objetos -->
+        <module name="ExplicitInitialization">
+            <property name="onlyObjectReferences" value="true"/>
+        </module>
+        <!-- No debe haber importaciones sin usar -->
+        <module name="UnusedImports"/>
+        <!-- No debe haber importaciones con '*' -->
+        <module name="AvoidStarImport"/>
+
+        <!-- Posicion correcta del Javadoc -->
+        <module name="InvalidJavadocPosition"/>
+        <!-- Javadoc con tags -->
+        <module name="SingleLineJavadoc"/>
+        <!-- Javadoc con tags -->
+        <module name="JavadocMethod"/>
+        <!-- Javadoc en métodos -->
+        <module name="MissingJavadocMethod"/>
+        <!-- Ubicacion del contenido del Javadoc -->
+        <module name="JavadocContentLocation"/>
+        <!-- Alineacion del asterisco en el Javadoc -->
+        <module name="JavadocLeadingAsteriskAlignCheck" />
+        <!-- Asterisco inicial en el Javadoc -->
+        <module name="JavadocMissingLeadingAsteriskCheck"/>
+        <!-- Espacio después del asterisco en el Javadoc -->
+        <module name="JavadocMissingWhitespaceAfterAsteriskCheck"/>
+
+
+        <!-- Switch debe tener default -->
+        <module name="MissingSwitchDefault"/>
+        <!-- Profundidad maxima de bucles anidados -->
+        <module name="NestedForDepth"/>
+        <!-- Profundidad maxima de ifs anidados -->
+        <module name="NestedIfDepth">
+            <property name="max" value="2"/>
+        </module>
+        <!-- No debe haber archivos sin codigo -->
+        <module name="NoCodeInFile"/>
+        <!-- No debe haber espacios en blanco despues de ciertos tokens -->
+        <module name="NoWhitespaceAfter"/>
+        <!-- Una sola sentencia por linea -->
+        <module name="OneStatementPerLine"/>
+
+        <!-- Nombres de clases: CamelCase con mayuscula inicial -->
+        <module name="TypeName"/>
+        <!-- Nombres de metodos: camelCase con minuscula inicial -->
+        <module name="MethodName"/>
+        <!-- Nombres de variables de instancia -->
+        <module name="MemberName"/>
+        <!-- Nombres de constantes: MAYUSCULAS_CON_GUIONES_BAJOS -->
+        <module name="ConstantName"/>
+
+        <!-- Nombres de variables locales -->
+        <module name="LocalVariableName"/>
+
+        <!-- Nombres de parametros -->
+        <module name="ParameterName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+        </module>
+        <!-- Numero de parametros en metodos -->
+        <module name="ParameterNumber"/>
+        <!-- Nombres de variables de patrones (pattern variables) -->
+        <module name="PatternVariableName">
+            <property name="format" value="^[a-z][_a-zA-Z0-9]{4,}$"/>
+        </module>
+        <!-- Nombres de identificadores ilegales -->
+        <module name="IllegalIdentifierName"/>
+        <!-- Nombres de paquetes: minusculas con puntos -->
+        <module name="PackageName"/>
+
+    </module>
+</module>
