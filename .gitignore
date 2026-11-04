@@ -40,3 +40,4 @@ build/
 
 ### tests
 #src/test/
+.idea/
